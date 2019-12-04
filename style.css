@@ -1,8 +1,40 @@
 body {
     background: black;
-    color: cornflowerblue;
+    color: rgb(80, 117, 185);
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
 }
-div {
+header {
+    display: flex;
+    flex-direction: row;
+}
+section {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    flex-grow: 8;
+}
+.score {
+    flex-grow: 1;
+}
+.sc-tracker {
+    flex-grow: 1;
+}
+main {
+    display: flex;
+    flex-direction: row;
+
+}
+section {
+    display: flex;
+    flex-grow: 5;
+}
+aside {
+    display: flex;
+    flex-grow: 7;
     height: 60vw;
     width: 40vw;
+    background: darkblue;
 }
