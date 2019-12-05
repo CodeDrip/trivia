@@ -38,9 +38,13 @@ section {
     padding: 20px;
 
 }
+/* ul {
+    /* margin: 0; 
+} */
 .choices li {
     background: grey;
     list-style: none;
+    margin: 10px;
 }
 button {
     float: right;

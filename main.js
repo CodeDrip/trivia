@@ -154,52 +154,116 @@ let quiz = [
 ]
 
 //just a thought
-var startGame = function() {
-    const a;
-}
+// var startGame = function() {
+//     const a;
+// }
 
 //variables
-// var currentQuestion = 0;
+
 var totalQuestions = quiz.length;
-var points = 0;
+
 var stats;
 
-var plyrChoice;
-var correctChoice;
+// var plyrChoice;
+// var correctChoice;
 
-var container = document.getElementsByTagName("section")
-var docShowQuestion = document.getElementsByTagName("h2").innerhtml
-var docFirstCh = document.getElementsByClassName("first-ch").innerhtml
-var docSecondCh = document.getElementsByClassName("second-ch").innerhtml
-var docThirdCh = document.getElementsByClassName("third-ch").innerhtml
-var docFourthCh = document.getElementsByClassName("fourth-ch").innerhtml
-var docAnswer;
-var nextButton = document.getElementById("nexBtn")
+// var container = document.querySelector("section")
+// var docShowQuestion = document.querySelector("h2").innerHTML
+// var docFirstCh = document.querySelector("#first-ch").innerHTML
+// var docSecondCh = document.querySelector("#second-ch").textContent
+// var docThirdCh = document.querySelector("#third-ch").textContent
+// var docFourthCh = document.querySelector("#fourth-ch").textContent
+// var docmoviePic = document.querySelector("aside").style.background
+// var docAnswer;
+// var nextButton = document.getElementById("nexBtn")
 
-// var game {}
+cQ = 0; //current Question
 
-//first question load
-question1 = quiz[0].question;
-// console.log(firstQu)
-firstCh1 = quiz[0].firstCh
-secondCh1 = quiz[0].firstCh
-thirdCh1 = quiz[0].firstCh
-fourthCh1 = quiz[0].firstCh
-
-//record + score player answer
-
-
-
-//load next Questions
-function getQuiz(i) {
-    var q = quiz[i];
-    docShowQuestion = quiz[i].question
-    docFirstCh = quiz[i].firstCh
-    docSecondCh = quiz[i].secondCh
-    docThirdCh = quiz[i].thirdCh
-    docFourthCh = quiz[i].fourthCh
-
-    return i++
+function startGame() {
+    //set first set of questions
+    document.querySelector("h2").innerHTML = quiz[cQ].question;
+    document.querySelector("#first-ch").innerHTML = quiz[cQ].firstCh;
+    document.querySelector("#second-ch").textContent = quiz[cQ].secondCh;
+    document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
+    document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
+    document.querySelector("aside").style.background = `url(${quiz[cQ].img})`
+    return cQ = cQ + 1;
 }
 
+// for (let i = 0; i < grabOptions.length; i++) { 
+//     grabOptions[i].addEventListener("click", function(evt) {
+//         //how to handle the comparison for the selected answer to the correct answer
+//         if(evt.target.innerhtml == quiz[0].answer){
+//             alert("cool")
+// } else {
+//     alert("notterrible")
+// }
+// })
+    
+// }
 
+
+
+// var cQ = 0;
+// //load Questions
+// function getQuiz(cQ) {
+//     q = questions[cQ];
+//     console.log(quiz[0]);
+//     document.querySelector("h2").innerHTML = (cQ + 1) + '. ' + q.question;
+//     document.querySelector("#first-ch").innerHTML = quiz[cQ].firstCh;
+//     document.querySelector("#second-ch").textContent = quiz[cQ].secondCh;
+//     document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
+//     document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
+// }
+
+// function loadNext () {
+//     console.log(hey)
+// }
+// //load first question
+// function firstQ() {
+// docShowQuestion = quiz[0].question;
+// console.log(docShowQuestion)
+// docFirstCh = quiz[0].firstCh
+// docSecondCh = quiz[0].firstCh
+// docThirdCh = quiz[0].firstCh
+// docFourthCh = quiz[0].firstCh
+// }
+
+
+//record + score player answer
+const grabOptions = document.querySelectorAll(".options")
+console.log()
+console.log(grabOptions)
+
+
+// change innerhtml of options to reflect questions 
+
+
+// for (let i = 0; i < grabOptions.length; i++) { 
+//     grabOptions[i].addEventListener("click", function(evt) {
+//         //how to handle the comparison for the selected answer to the correct answer
+//         if(evt.target.innerhtml == quiz[0].answer){
+//             alert("cool")
+// } else {
+//     alert("notterrible")
+// }
+// })
+    
+// }
+
+// let roundCount = 1
+
+// //load next Questions
+// function getQuiz() {
+//     var q = quiz[];
+//     docShowQuestion = quiz[roundCount].question
+//     docFirstCh = quiz[i].firstCh
+//     docSecondCh = quiz[i].secondCh
+//     docThirdCh = quiz[i].thirdCh
+//     docFourthCh = quiz[i].fourthCh
+
+//     return roundCount++
+// }
+
+// getQuiz(1)
+// getQuiz(1)
