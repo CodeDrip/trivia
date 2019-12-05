@@ -25,16 +25,23 @@ h1 {
 main {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
 }
 section {
     display: flex;
     flex-grow: 5;
+    padding: 20px;
+
+}
+.choices li {
+    background: grey;
+    list-style: none;
 }
 aside {
     display: flex;
     flex-grow: 7;
-    height: 60vw;
+    height: 40vw;
     width: 40vw;
     background: darkblue;
 }
