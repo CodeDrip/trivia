@@ -155,14 +155,14 @@ let quiz = [
 
 //just a thought
 var startGame = function() {
-    var a;
+    const a;
 }
 
 //variables
-var currentQuestion = 0;
+// var currentQuestion = 0;
 var totalQuestions = quiz.length;
-var score = 0;
-var points;
+var points = 0;
+var stats;
 
 var plyrChoice;
 var correctChoice;
@@ -178,11 +178,28 @@ var nextButton = document.getElementById("nexBtn")
 
 // var game {}
 
-//load Questions
+//first question load
+question1 = quiz[0].question;
+// console.log(firstQu)
+firstCh1 = quiz[0].firstCh
+secondCh1 = quiz[0].firstCh
+thirdCh1 = quiz[0].firstCh
+fourthCh1 = quiz[0].firstCh
+
+//record + score player answer
+
+
+
+//load next Questions
 function getQuiz(i) {
     var q = quiz[i];
-    i++
-    docshowQuestion = quiz[i].question
+    docShowQuestion = quiz[i].question
+    docFirstCh = quiz[i].firstCh
+    docSecondCh = quiz[i].secondCh
+    docThirdCh = quiz[i].thirdCh
+    docFourthCh = quiz[i].fourthCh
+
+    return i++
 }
 
 
