@@ -187,20 +187,35 @@ function startGame() {
     document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
     document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
     document.querySelector("aside").style.background = `url(${quiz[cQ].img})`
-    return cQ = cQ + 1;
+    // return cQ = cQ + 1;
 }
 
-// for (let i = 0; i < grabOptions.length; i++) { 
-//     grabOptions[i].addEventListener("click", function(evt) {
-//         //how to handle the comparison for the selected answer to the correct answer
-//         if(evt.target.innerhtml == quiz[0].answer){
-//             alert("cool")
-// } else {
-//     alert("notterrible")
-// }
-// })
+//record + score player answer
+const grabOptions = document.querySelectorAll(".options")
+console.log()
+console.log(grabOptions)
+
+
+
+for (let i = 0; i < grabOptions.length; i++) { 
+    grabOptions[i].addEventListener("click", function(evt) {
+        //how to handle the comparison for the selected answer to the correct answer
+        if(evt.target.innerhtml == quiz[cQ].answer){
+            console.log(evt.target)
+            console.log(evt.target.innerhtml)
+            console.log(quiz[cQ].answer)
+
+            alert("cool")
+}       else {
+            alert("not terrible")
+            console.log(evt.target)
+            console.log(evt.target.innerhtml)
+            console.log(quiz[cQ].answer)
+
+}
+})
     
-// }
+}
 
 
 
@@ -230,10 +245,10 @@ function startGame() {
 // }
 
 
-//record + score player answer
-const grabOptions = document.querySelectorAll(".options")
-console.log()
-console.log(grabOptions)
+// //record + score player answer
+// const grabOptions = document.querySelectorAll(".options")
+// console.log()
+// console.log(grabOptions)
 
 
 // change innerhtml of options to reflect questions 
