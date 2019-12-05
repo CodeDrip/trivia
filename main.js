@@ -1,15 +1,165 @@
 console.log("Push Thruuuu")
 
+//quiz questions
+let quiz = [
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    {
+        question: "Quiz Question",
+        firstCh: "Answer",
+        secondCh: "answer",
+        thirdCh: "Another",
+        fourthCh: "Last",
+        img: "",
+        answer: firstCh
+    },
+    
+
+]
+
+//just a thought
 var startGame = function() {
     var a;
 }
+
+//variables
 var currentQuestion = 0;
 var totalQuestions = quiz.length;
 var score = 0;
 var points;
-// var currentQuestion;
-// var totalQuestions = arr.length;
-
 
 var plyrChoice;
 var correctChoice;
