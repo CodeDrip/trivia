@@ -1,15 +1,18 @@
 console.log("Push Thruuuu")
 
+//quiz answers
+
+
 //quiz questions
 let quiz = [
     {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: firstCh
+        question: "Whats That Movie?",
+        firstCh: "Players Club",
+        secondCh: "Set It Off",
+        thirdCh: "Friday After Next",
+        fourthCh: "Juice",
+        img: "img/qq1.jpg",
+        answer: "Set It Off"
     },
     {
         question: "Quiz Question",
@@ -18,7 +21,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 1
     },
     {
         question: "Quiz Question",
@@ -27,7 +30,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 2
     },
     {
         question: "Quiz Question",
@@ -36,7 +39,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 3
     },
     {
         question: "Quiz Question",
@@ -45,7 +48,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 2
     },
     {
         question: "Quiz Question",
@@ -54,7 +57,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 4
     },
     {
         question: "Quiz Question",
@@ -63,7 +66,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 1
     },
     {
         question: "Quiz Question",
@@ -72,7 +75,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 3
     },
     {
         question: "Quiz Question",
@@ -81,7 +84,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 1
     },
     {
         question: "Quiz Question",
@@ -90,7 +93,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 4
     },
     {
         question: "Quiz Question",
@@ -99,7 +102,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 3
     },
     {
         question: "Quiz Question",
@@ -108,7 +111,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 1
     },
     {
         question: "Quiz Question",
@@ -117,7 +120,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 2
     },
     {
         question: "Quiz Question",
@@ -126,7 +129,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 4
     },
     {
         question: "Quiz Question",
@@ -135,7 +138,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 3
     },
     {
         question: "Quiz Question",
@@ -144,7 +147,7 @@ let quiz = [
         thirdCh: "Another",
         fourthCh: "Last",
         img: "",
-        answer: firstCh
+        answer: 1
     },
     
 
@@ -165,13 +168,21 @@ var plyrChoice;
 var correctChoice;
 
 var container = document.getElementsByTagName("section")
-var showQuestion = document.getElementsByTagName("h2").innerhtml
-var firstCh = document.getElementsByClassName("first-ch").innerhtml
-var secondCh = document.getElementsByClassName("second-ch").innerhtml
-var thirdCh = document.getElementsByClassName("third-ch").innerhtml
-var fourthCh = document.getElementsByClassName("fourth-ch").innerhtml
-var answer;
+var docShowQuestion = document.getElementsByTagName("h2").innerhtml
+var docFirstCh = document.getElementsByClassName("first-ch").innerhtml
+var docSecondCh = document.getElementsByClassName("second-ch").innerhtml
+var docThirdCh = document.getElementsByClassName("third-ch").innerhtml
+var docFourthCh = document.getElementsByClassName("fourth-ch").innerhtml
+var docAnswer;
 var nextButton = document.getElementById("nexBtn")
 
 // var game {}
+
+//load Questions
+function getQuiz(i) {
+    var q = quiz[i];
+    i++
+    docshowQuestion = quiz[i].question
+}
+
 
