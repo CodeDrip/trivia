@@ -3,155 +3,42 @@ console.log("Push Thruuuu")
 //quiz answers
 
 
-//quiz questions
-let quiz = [
-    {
-        question: "Whats That Movie?",
-        firstCh: "Players Club",
-        secondCh: "Set It Off",
-        thirdCh: "Friday After Next",
-        fourthCh: "Juice",
-        img: "img/qq1.jpg",
-        answer: "Set It Off"
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 1
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 2
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 3
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 2
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 4
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 1
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 3
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 1
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 4
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 3
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 1
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 2
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 4
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 3
-    },
-    {
-        question: "Quiz Question",
-        firstCh: "Answer",
-        secondCh: "answer",
-        thirdCh: "Another",
-        fourthCh: "Last",
-        img: "",
-        answer: 1
-    },
-    
 
+//quiz questions
+let quiz = 
+[
+    [
+        [{
+            firstCh: "Players Club",
+            correct: true 
+        },
+        {
+            secondCh: "Set It Off",
+            correct: true
+        },
+        {
+            thirdCh: "Friday After Next",
+            correct: true
+        },
+        {
+            fourthCh: "Juice",
+            correct: false
+        },
+        {
+            q: "Whats That Movie?"
+        },
+        {
+             img: "img/qq1.jpg"
+        }
+        ]
+
+    ]
 ]
+console.log(quiz[0])
+console.log()
+console.log()
+console.log()
+
 
 //just a thought
 // var startGame = function() {
@@ -179,43 +66,43 @@ var stats;
 
 cQ = 0; //current Question
 
-function startGame() {
-    //set first set of questions
-    document.querySelector("h2").innerHTML = quiz[cQ].question;
-    document.querySelector("#first-ch").innerHTML = quiz[cQ].firstCh;
-    document.querySelector("#second-ch").textContent = quiz[cQ].secondCh;
-    document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
-    document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
-    document.querySelector("aside").style.background = `url(${quiz[cQ].img})`
-    // return cQ = cQ + 1;
-}
+// function startGame() {
+//     //set first set of questions
+//     document.querySelector("h2").innerHTML = quiz[cQ].question;
+//     document.querySelector("#first-ch").innerHTML = quiz[cQ].firstCh;
+//     document.querySelector("#second-ch").textContent = quiz[cQ].secondCh;
+//     document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
+//     document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
+//     document.querySelector("aside").style.background = `url(${quiz[cQ].img})`
+//     // return cQ = cQ + 1;
+// }
 
-//record + score player answer
-const grabOptions = document.querySelectorAll(".options")
-console.log()
-console.log(grabOptions)
+// //record + score player answer
+// const grabOptions = document.querySelectorAll(".options")
+// console.log()
+// console.log(grabOptions)
 
 
 
-for (let i = 0; i < grabOptions.length; i++) { 
-    grabOptions[i].addEventListener("click", function(evt) {
-        //how to handle the comparison for the selected answer to the correct answer
-        if(evt.target.innerhtml == quiz[cQ].answer){
-            console.log(evt.target)
-            console.log(evt.target.innerhtml)
-            console.log(quiz[cQ].answer)
+// for (let i = 0; i < grabOptions.length; i++) { 
+//     grabOptions[i].addEventListener("click", function(evt) {
+//         //how to handle the comparison for the selected answer to the correct answer
+//         if(evt.target.innerhtml == quiz[cQ].answer){
+//             console.log(evt.target)
+//             console.log(evt.target.innerhtml)
+//             console.log(quiz[cQ].answer)
 
-            alert("cool")
-}       else {
-            alert("not terrible")
-            console.log(evt.target)
-            console.log(evt.target.innerhtml)
-            console.log(quiz[cQ].answer)
+//             alert("cool")
+// }       else {
+//             alert("not terrible")
+//             console.log(evt.target)
+//             console.log(evt.target.innerhtml)
+//             console.log(quiz[cQ].answer)
 
-}
-})
+// }
+// })
     
-}
+// }
 
 
 
@@ -282,3 +169,152 @@ for (let i = 0; i < grabOptions.length; i++) {
 
 // getQuiz(1)
 // getQuiz(1)
+
+// let quiz = [
+//     {
+//         question: "Whats That Movie?",
+//         firstCh: "Players Club",
+//         secondCh: "Set It Off",
+//         thirdCh: "Friday After Next",
+//         fourthCh: "Juice",
+//         img: "img/qq1.jpg",
+//         answer: "Set It Off"
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 1
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 2
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 3
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 2
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 4
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 1
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 3
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 1
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 4
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 3
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 1
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 2
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 4
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 3
+//     },
+//     {
+//         question: "Quiz Question",
+//         firstCh: "Answer",
+//         secondCh: "answer",
+//         thirdCh: "Another",
+//         fourthCh: "Last",
+//         img: "",
+//         answer: 1
+//     },
+    
+
+// ]
