@@ -8,36 +8,117 @@ console.log("Push Thruuuu")
 let quiz = 
 [
     [
+        
+            // "Whats That Show?",
+       
+            //  "img/qq1.jpg"
+        
+       
         [{
-            firstCh: "Players Club",
+            quest: "Whats That Show",
+        
+            img:  "img/qq1.jpg"
+        },{
+            firstCh: "The Tick",
             correct: true 
         },
         {
-            secondCh: "Set It Off",
+            secondCh: "Rocket Power",
             correct: true
         },
         {
-            thirdCh: "Friday After Next",
+            thirdCh: "Hey Arnold!",
             correct: true
         },
         {
-            fourthCh: "Juice",
+            fourthCh: "Gargoyles",
+            correct: false
+        }
+        ]
+    
+
+    ],
+    [
+        [{
+            firstCh: "",
+            correct: true 
+        },
+        {
+            secondCh: "",
+            correct: true
+        },
+        {
+            thirdCh: "",
+            correct: true
+        },
+        {
+            fourthCh: "",
             correct: false
         },
         {
-            q: "Whats That Movie?"
+            q: "",
         },
         {
-             img: "img/qq1.jpg"
-        }
+            img: ""
+        },
         ]
 
-    ]
+    ],
+    [
+        [{
+            firstCh: "",
+            correct: true 
+        },
+        {
+            secondCh: "",
+            correct: true
+        },
+        {
+            thirdCh: "",
+            correct: true
+        },
+        {
+            fourthCh: "",
+            correct: false
+        },
+        {
+            q: "",
+        },
+        {
+            img: ""
+        },
+        ]
+
+    ],
+    
 ]
-console.log(quiz[0])
-console.log()
-console.log()
-console.log()
+// console.log(quiz[0])
+console.log(quiz[0][0])//
+console.log(quiz[0][0][0].quest)
+console.log(quiz[0][0][0].img)
+console.log(quiz[0][0][1].firstCh)//first ch string
+console.log(quiz[0][0][1].correct)//first ch boolean
+console.log(quiz[0][0][2].secondCh)//secondCh string
+console.log(quiz[0][0][2].correct)
+console.log(quiz[0][0][3].thirdCh)//3rd
+console.log(quiz[0][0][3].correct)
+console.log(quiz[0][0][4].fourthCh)//4th string
+console.log(quiz[0][0][4].correct)
+
+
+
+// console.log(quiz[0][2])
+
+// console.log(quiz[0][1].fourthCh)
+// console.log(quiz[0][3)
+// console.log(quiz[0][2][0].firstCh)
+// console.log(quiz[0][2][0].img)
+// console.log()
+// console.log()
+// console.log()
+// console.log()
+// console.log()
+
 
 
 //just a thought
@@ -54,15 +135,15 @@ var stats;
 // var plyrChoice;
 // var correctChoice;
 
-// var container = document.querySelector("section")
-// var docShowQuestion = document.querySelector("h2").innerHTML
-// var docFirstCh = document.querySelector("#first-ch").innerHTML
-// var docSecondCh = document.querySelector("#second-ch").textContent
-// var docThirdCh = document.querySelector("#third-ch").textContent
-// var docFourthCh = document.querySelector("#fourth-ch").textContent
-// var docmoviePic = document.querySelector("aside").style.background
-// var docAnswer;
-// var nextButton = document.getElementById("nexBtn")
+var container = document.querySelector("section")
+var docShowQuestion = document.querySelector("h2").innerHTML
+var docFirstCh = document.querySelector("#first-ch").innerHTML
+var docSecondCh = document.querySelector("#second-ch").textContent
+var docThirdCh = document.querySelector("#third-ch").textContent
+var docFourthCh = document.querySelector("#fourth-ch").textContent
+var docmoviePic = document.querySelector("aside").style.background
+var docAnswer;
+var nextButton = document.getElementById("nexBtn")
 
 cQ = 0; //current Question
 
