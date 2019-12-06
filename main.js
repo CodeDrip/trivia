@@ -5,152 +5,123 @@ console.log("Push Thruuuu")
 
 
 //quiz questions
-let quiz = 
-[
-    [
-        
-            // "Whats That Show?",
-       
-            //  "img/qq1.jpg"
-        
-       
-        [{
-            quest: "Whats That Show?",
-        
-            img:  "img/num1.gif"
-        },{
-            firstCh: "The Tick",
-            correct: false 
+
+    var quiz = [
+        {q : "Whats That Show",
+        options: ["The Tick", "Hey Arnold!", "Rocket Power", "Gargoyles"],
+        answer: 2
         },
-        {
-            secondCh: "Rocket Power",
-            correct: true
+        {q : "Whats That Movie",
+        options: [],
+        answer: Number
         },
-        {
-            thirdCh: "Hey Arnold!",
-            correct: false
-        },
-        {
-            fourthCh: "Gargoyles",
-            correct: false
+        {q : "Who is that",
+        options: [],
+        answer: Number
         }
-        ]
-    
+    ]
 
-    ],
-    [
-        [{
-            firstCh: "",
-            correct: true 
-        },
-        {
-            secondCh: "",
-            correct: true
-        },
-        {
-            thirdCh: "",
-            correct: true
-        },
-        {
-            fourthCh: "",
-            correct: false
-        },
-        {
-            q: "",
-        },
-        {
-            img: ""
-        },
-        ]
-
-    ],
-    [
-        [{
-            firstCh: "",
-            correct: true 
-        },
-        {
-            secondCh: "",
-            correct: true
-        },
-        {
-            thirdCh: "",
-            correct: true
-        },
-        {
-            fourthCh: "",
-            correct: false
-        },
-        {
-            q: "",
-        },
-        {
-            img: ""
-        },
-        ]
-
-    ],
-    
-]
 // console.log(quiz[0])
-console.log(quiz[0][0])//
-console.log(quiz[0][0][0].quest)
-console.log(quiz[0][0][0].img)
-console.log(quiz[0][0][1].firstCh)//first ch string
-console.log(quiz[0][0][1].correct)//first ch boolean
-console.log(quiz[0][0][2].secondCh)//secondCh string
-console.log(quiz[0][0][2].correct)
-console.log(quiz[0][0][3].thirdCh)//3rd
-console.log(quiz[0][0][3].correct)
-console.log(quiz[0][0][4].fourthCh)//4th string
-console.log(quiz[0][0][4].correct)
+console.log(quiz[0])//quiz object in array
+console.log(quiz[0].q)//question
+console.log(quiz[0].options)//options array 
+console.log(quiz[0].options[0])//option 1
+console.log(quiz[0].options[1])//option 2
+console.log(quiz[0].options[2])//option 3
+console.log(quiz[0].options[3])//option 4
+console.log(quiz[0].answer)//answer "index num"
 
 
-//variables
-cQ = 0; //current Question
-var totalQuestions = quiz.length;
-var stats;
-// var plyrChoice;
-// var correctChoice;
+// console.log(quiz[0][0][0].quest)
+// console.log(quiz[0][0][0].img)
+// console.log(quiz[0][0][1].firstCh)//first ch string
+// console.log(quiz[0][0][1].correct)//first ch boolean
+// console.log(quiz[0][0][2].secondCh)//secondCh string
+// console.log(quiz[0][0][2].correct)
+// console.log(quiz[0][0][3].thirdCh)//3rd
+// console.log(quiz[0][0][3].correct)
+// console.log(quiz[0][0][4].fourthCh)//4th string
+// console.log(quiz[0][0][4].correct)
+// console.log(quiz[0][0][5].answer)
+
+
+// //variables
+// cQ = 0; //current Question
+// var totalQuestions = quiz.length;
+// var stats;
+// // var plyrChoice;
+// // var correctChoice;
 
 
 
-var container = document.querySelector("section")
-var docQuestion = document.querySelector("h2").innerHTML
-var docFirstCh = document.querySelector("#first-ch").innerHTML
-var docSecondCh = document.querySelector("#second-ch").textContent
-var docThirdCh = document.querySelector("#third-ch").textContent
-var docFourthCh = document.querySelector("#fourth-ch").textContent
-var docmoviePic = document.querySelector("aside").style.background
-var docAnswer;
-var nextButton = document.getElementById("nexBtn")
+// var container = document.querySelector("section")
+// var docQuestion = document.querySelector("h2").innerHTML
+// var docFirstCh = document.querySelector("#first-ch").innerHTML
+// var docSecondCh = document.querySelector("#second-ch").textContent
+// var docThirdCh = document.querySelector("#third-ch").textContent
+// var docFourthCh = document.querySelector("#fourth-ch").textContent
+// var docmoviePic = document.querySelector("aside").style.background
+// var docAnswer;
+// var nextButton = document.getElementById("nexBtn")
 
 
-function startGame() {
-    //set first set of questions
-    document.querySelector("h2").innerHTML = quiz[0][0][0].quest;
-    document.querySelector("#first-ch").innerHTML = quiz[0][0][1].firstCh;
-    document.querySelector("#second-ch").textContent = quiz[0][0][2].secondCh;
-    document.querySelector("#third-ch").textContent = quiz[0][0][3].thirdCh;
-    document.querySelector("#fourth-ch").textContent = quiz[0][0][4].fourthCh;
-    document.querySelector("aside").style.background = `url(${quiz[0][0][0].img})`
-    // return cQ = cQ + 1;
-}
+// function startGame() {
+//     //set first set of questions
+//     document.querySelector("h2").innerHTML = quiz[0][0][0].quest;
+//     document.querySelector("#first-ch").innerHTML = quiz[0][0][1].firstCh;
+//     document.querySelector("#second-ch").textContent = quiz[0][0][2].secondCh;
+//     document.querySelector("#third-ch").textContent = quiz[0][0][3].thirdCh;
+//     document.querySelector("#fourth-ch").textContent = quiz[0][0][4].fourthCh;
+//     document.querySelector("aside").style.background = `url(${quiz[0][0][0].img})`
+//     // return cQ = cQ + 1;
+// }
 
 // //record + score player answer
-// const grabOptions = document.querySelectorAll(".options")
-// console.log()
-// console.log(grabOptions)
+// // console.log()
+// // console.log(grabOptions)
 
 
 
-// for (let i = 0; i < grabOptions.length; i++) { 
-//     grabOptions[i].addEventListener("click", function(evt) {
-//         //how to handle the comparison for the selected answer to the correct answer
-//         if(evt.target.innerhtml == quiz[cQ].answer){
+// const list = document.querySelector("ul")
+// const items = list.querySelectorAll("li") 
+// console.log(list)
+// // console.log(items1)
+
+
+
+// function choice(ele) {
+
+//     console.log
+//             if(ele.innerhtml == quiz[0][0][i].answer){
+//             console.log(evt.target)
+//             console.log(evt.target.li)
+//             console.log(quiz[0][0][i].answer)
+
+//             alert("cool")
+// }       else {
+//             alert("not terrible")
 //             console.log(evt.target)
 //             console.log(evt.target.innerhtml)
 //             console.log(quiz[cQ].answer)
+
+// }
+// }
+
+
+// for (let i = 0; i < list.length; i++) { 
+//         //grabOptions[i].addEventListener("click", function(evt) {
+//     let items = list[i].querySelectorAll("li");
+//     console.log(items)
+        
+//     for (var j = 0; j < items.length; ++j) {
+//         items[j]
+
+//         items.addEventListener("click", function(evt) {
+
+//         if(evt.target.innerhtml == quiz[0][0][i].answer){
+//             console.log(evt.target)
+//             console.log(evt.target.li)
+//             console.log(quiz[0][0][i].answer)
 
 //             alert("cool")
 // }       else {
@@ -161,8 +132,11 @@ function startGame() {
 
 // }
 // })
-    
+
 // }
+// }
+    
+
 
 
 

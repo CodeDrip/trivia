@@ -13,24 +13,24 @@
         <p class="score">20 points</p>
         <p class="sc-tracker">5/10</p>
     </header>
-    <button id="start-button" onclick="startGame();">Start</button>
     <main>
-    <section>
         <h2>Ask A Question</h2>
+    <section>
+        
         <article class="choices">
-            <ul>
-                <li class="options" id="first-ch">Test1</li>
-                <li class="options" id="second-ch">Test2</li>
-                <li class="options" id="third-ch">Test3</li>
-                <li class="options" id="fourth-ch">test4</li>
+            <ul id = "quiz-cont">
+                <li class="options" id="first-ch" onclick="choice(this)">Test1</li>
+                <li class="options" id="second-ch" onclick="choice(this)">Test2</li>
+                <li class="options" id="third-ch" onclick="choice(this)">Test3</li>
+                <li class="options" id="fourth-ch" onclick="choice(this)">test4</li>
             </ul>
-            <button id="nexBtn" class="next-button" onclick="loadNext();">Next</button>
         </article>
+        <button id="nexBtn" class="next-button" onclick="loadNext();">Next</button>
     </section>
     <aside>
-        <div class="mov-img">
-        </div>
+        
     </aside>
+    <button id="start-button" onclick="startGame();">Start</button>
 </main>
     <script src="main.js"></script>
     <!-- <script src="questions.js"></script> -->
