@@ -1,9 +1,9 @@
 var container = document.querySelector("section")
 var docQuestion = document.querySelector("h2")//.innerHTML
-var docFirstCh = document.querySelector("#first-ch")//.innerHTML
-var docSecondCh = document.querySelector("#second-ch")//.textContent
-var docThirdCh = document.querySelector("#third-ch")//.textContent
-var docFourthCh = document.querySelector("#fourth-ch")//.textContent
+var docFirstCh = document.querySelector("#ch0")//.innerHTML
+var docSecondCh = document.querySelector("#ch1")//.textContent
+var docThirdCh = document.querySelector("#ch2")//.textContent
+var docFourthCh = document.querySelector("#ch3")//.textContent
 var docmoviePic = document.querySelector("aside")//.style.background
 var docAnswer;
 var nextButton = document.getElementById("nexBtn")
@@ -34,11 +34,16 @@ var game = {
         docThirdCh.innerHTML = this.quiz[this.index].options[2]
         docFourthCh.innerHTML = this.quiz[this.index].options[3]
         docmoviePic.style.background = `url(${this.quiz[this.index].img})`
-
     },
-    selected: function(ele) {
-        alert(ele)
+    check: function(ele) {
+        var id = ele.id.split("");
+        console.log(id)
     }
+   
 }
 
 window.onload = game.loadQ()
+
+function selected(ele) {
+    game.check(ele);
+}
