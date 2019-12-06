@@ -9,6 +9,10 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    height: 10vh;
+}
+#start-button{
+    width: 20vh;
 }
 section {
     display: flex;

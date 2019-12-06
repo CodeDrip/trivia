@@ -15,12 +15,12 @@ let quiz =
         
        
         [{
-            quest: "Whats That Show",
+            quest: "Whats That Show?",
         
-            img:  "img/qq1.jpg"
+            img:  "img/num1.gif"
         },{
             firstCh: "The Tick",
-            correct: true 
+            correct: false 
         },
         {
             secondCh: "Rocket Power",
@@ -28,7 +28,7 @@ let quiz =
         },
         {
             thirdCh: "Hey Arnold!",
-            correct: true
+            correct: false
         },
         {
             fourthCh: "Gargoyles",
@@ -106,37 +106,17 @@ console.log(quiz[0][0][4].fourthCh)//4th string
 console.log(quiz[0][0][4].correct)
 
 
-
-// console.log(quiz[0][2])
-
-// console.log(quiz[0][1].fourthCh)
-// console.log(quiz[0][3)
-// console.log(quiz[0][2][0].firstCh)
-// console.log(quiz[0][2][0].img)
-// console.log()
-// console.log()
-// console.log()
-// console.log()
-// console.log()
-
-
-
-//just a thought
-// var startGame = function() {
-//     const a;
-// }
-
 //variables
-
+cQ = 0; //current Question
 var totalQuestions = quiz.length;
-
 var stats;
-
 // var plyrChoice;
 // var correctChoice;
 
+
+
 var container = document.querySelector("section")
-var docShowQuestion = document.querySelector("h2").innerHTML
+var docQuestion = document.querySelector("h2").innerHTML
 var docFirstCh = document.querySelector("#first-ch").innerHTML
 var docSecondCh = document.querySelector("#second-ch").textContent
 var docThirdCh = document.querySelector("#third-ch").textContent
@@ -145,18 +125,17 @@ var docmoviePic = document.querySelector("aside").style.background
 var docAnswer;
 var nextButton = document.getElementById("nexBtn")
 
-cQ = 0; //current Question
 
-// function startGame() {
-//     //set first set of questions
-//     document.querySelector("h2").innerHTML = quiz[cQ].question;
-//     document.querySelector("#first-ch").innerHTML = quiz[cQ].firstCh;
-//     document.querySelector("#second-ch").textContent = quiz[cQ].secondCh;
-//     document.querySelector("#third-ch").textContent = quiz[cQ].thirdCh;
-//     document.querySelector("#fourth-ch").textContent = quiz[cQ].fourthCh;
-//     document.querySelector("aside").style.background = `url(${quiz[cQ].img})`
-//     // return cQ = cQ + 1;
-// }
+function startGame() {
+    //set first set of questions
+    document.querySelector("h2").innerHTML = quiz[0][0][0].quest;
+    document.querySelector("#first-ch").innerHTML = quiz[0][0][1].firstCh;
+    document.querySelector("#second-ch").textContent = quiz[0][0][2].secondCh;
+    document.querySelector("#third-ch").textContent = quiz[0][0][3].thirdCh;
+    document.querySelector("#fourth-ch").textContent = quiz[0][0][4].fourthCh;
+    document.querySelector("aside").style.background = `url(${quiz[0][0][0].img})`
+    // return cQ = cQ + 1;
+}
 
 // //record + score player answer
 // const grabOptions = document.querySelectorAll(".options")
