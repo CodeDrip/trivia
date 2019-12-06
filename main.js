@@ -37,9 +37,14 @@ var game = {
     },
     check: function(ele) {
         var id = ele.id.split("");
-        console.log(id)
-        console.log(id.pop())
+        var comapreId = id.pop()
         console.log(this.quiz[this.index].answer)
+        
+        if(comapreId == this.quiz[this.index].answer) {
+            console.log("Truuuu")
+        } else {
+            console.log("tryy againnn!")
+        }
 
     }
    
