@@ -35,6 +35,9 @@ var game = {
         docFourthCh.innerHTML = this.quiz[this.index].options[3]
         docmoviePic.style.background = `url(${this.quiz[this.index].img})`
 
+    },
+    selected: function(ele) {
+        alert(ele)
     }
 }
 
