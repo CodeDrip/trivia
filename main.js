@@ -27,9 +27,9 @@ var game = {
         answer: 1,
         img: "img/rugrats.jpg"
         },
-        {q : "What Made ",
-        options: ["The Tick", "Hey Arnold!", "Rocket Power", "Gargoyles"],
-        answer: Number,
+        {q : "What Made These Girls So Powerful?",
+        options: ["Z Formula", "Potion X", "Ingredient X", "Z Juice"],
+        answer: 2,
         img: "img/puff.jpg"
         }
     ],
@@ -51,8 +51,9 @@ var game = {
     check: function(ele) {
         var id = ele.id.split("");
         var compareId = id.pop()
+        console.log(id)        
+        console.log(compareId)        
         console.log(this.quiz[this.index].answer)
-        
         if(compareId == this.quiz[this.index].answer) {
             console.log("Truuuu");
             this.points += 10;
@@ -75,14 +76,18 @@ var game = {
         pointsHolder.innerHTML = `${this.points} points`
 
      },
-    noMoreAction: function() {
-          // .removeEventListener("mousemove", myFunction);
-          for(let i = 0; i < domlist.length; i++){
+    noMoreAction : function() {
+        for(let i = 0; i < domlist.length; i++) {
             domlist[i].style.pointerEvents="none";
+        }
+    },
+    moreAction : function() {
+        for(let i = 0; i < domlist.length; i++) {
+            domlist[i].style.pointerEvents = "auto";
+            domlist[i].className = 'options'
+        }
     }
-    //     document.querySelector(".options"[i]).removeAttr("onclick");//("click", selected);
-      
-    }
+
 }
 
 window.onload = game.loadQ()
@@ -91,6 +96,7 @@ function selected(ele) {
     game.check(ele);
     game.noMoreAction();
 }
-function loadNext(){
+function loadNext() {
     game.loadNext();
+    game.moreAction();
 }
