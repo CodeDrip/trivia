@@ -10,6 +10,8 @@ var docThirdCh = document.querySelector("#ch2")//.textContent
 var docFourthCh = document.querySelector("#ch3")//.textContent
 var docmoviePic = document.querySelector("aside")//.style.background
 var docAnswer;
+var domlist = document.querySelectorAll("li")
+console.log(domlist[0])
 var nextButton = document.getElementById("nexBtn")
 // var points = 0
 
@@ -34,7 +36,7 @@ var game = {
     index: 0,
     loadQ: function() {
         // pointsHolder.innerHTML = `${points}`
-        // tracker.innerHTML = `${this.quiz.length} / ${this.quiz.length}`
+        // tracker.innerHTML = `${this.quiz.q.length} / ${this.quiz.length}`
         docQuestion.innerHTML = this.quiz[this.index].q
         docFirstCh.innerHTML = this.quiz[this.index].options[0]
         docSecondCh.innerHTML = this.quiz[this.index].options[1]
@@ -54,6 +56,7 @@ var game = {
             this.addPoints();
             console.log(ele.className);
             console.log(this.points);
+            // noMoreAction();
 
         } else {
             console.log("tryy againnn!")
@@ -67,6 +70,14 @@ var game = {
     addPoints : function(){
         pointsHolder.innerHTML = `${this.points} points`
 
+     },
+    noMoreAction: function() {
+          // .removeEventListener("mousemove", myFunction);
+          for(let i = 0; i < domlist.length; i++){
+            domlist[i].style.pointerEvents="none";
+    }
+    //     document.querySelector(".options"[i]).removeAttr("onclick");//("click", selected);
+      
     }
 }
 
@@ -74,4 +85,5 @@ window.onload = game.loadQ()
 
 function selected(ele) {
     game.check(ele);
+    game.noMoreAction();
 }
