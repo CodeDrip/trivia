@@ -35,14 +35,17 @@ var game = {
     ],
     index: 0,
     loadQ: function() {
-        // pointsHolder.innerHTML = `${points}`
-        // tracker.innerHTML = `${this.quiz.q.length} / ${this.quiz.length}`
+        if (this.index <= this.quiz.length-1) {
+        
         docQuestion.innerHTML = this.quiz[this.index].q
         docFirstCh.innerHTML = this.quiz[this.index].options[0]
         docSecondCh.innerHTML = this.quiz[this.index].options[1]
         docThirdCh.innerHTML = this.quiz[this.index].options[2]
         docFourthCh.innerHTML = this.quiz[this.index].options[3]
         docmoviePic.style.background = `url(${this.quiz[this.index].img})`
+        } else {
+            console.log("Quiz Overrr!")
+        }
     },
     loadNext: function(){
         this.index++;
