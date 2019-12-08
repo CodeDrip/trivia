@@ -25,12 +25,12 @@ var game = {
         {q : "Who Is This?",
         options: ["Eddie", "Chucky", "Tommy", "Phil"],
         answer: 1,
-        img: "img/rugrats.jpg"
+        img: "img/rugratss.gif"
         },
         {q : "What Made These Girls So Powerful?",
         options: ["Z Formula", "Potion X", "Ingredient X", "Z Juice"],
         answer: 2,
-        img: "img/puff.jpg"
+        img: "img/Powerpuff.gif"
         }
     ],
     index: 0,
