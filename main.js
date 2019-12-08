@@ -44,6 +44,10 @@ var game = {
         docFourthCh.innerHTML = this.quiz[this.index].options[3]
         docmoviePic.style.background = `url(${this.quiz[this.index].img})`
     },
+    loadNext: function(){
+        this.index++;
+        this.loadQ();
+    },
     check: function(ele) {
         var id = ele.id.split("");
         var compareId = id.pop()
@@ -86,4 +90,7 @@ window.onload = game.loadQ()
 function selected(ele) {
     game.check(ele);
     game.noMoreAction();
+}
+function loadNext(){
+    game.loadNext();
 }
