@@ -35,9 +35,11 @@ h2 {
     text-align: center;
     font-size: 2vw;
     background-color:#874BF9;
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
     line-height: 4vw;
+    border-radius: 8px;
+
 
 }
 .score {
@@ -52,7 +54,7 @@ main {
 }
 .choices ul {
     height: 15vw;
-	width: 80vw;
+	width: 60vw;
 	background-color: #00FFCB;
 	margin: 1vw auto;
 	border-radius: 8px;
@@ -66,11 +68,11 @@ main {
 .choices li {
     display: inline-block;
 	background-color:#874BF9;
-	width: 30vw;
+	width: 25vw;
 	padding: 1vw;
 	border-radius: 1vw;
-	margin: 1vw;
-	font-size: 2vw;
+	margin: 2.3vw 1vw;
+	font-size: 1.5vw;
 	color:#E0FFF9;
 	box-shadow: 0px 3px 0px rgb(45, 25, 82);
 	cursor: pointer;
@@ -81,14 +83,14 @@ main {
 }
 #nexBtn {
     width: 20vw;
-    margin: 0 auto;
+    margin: 10px auto;
 	border-radius: 1.5vw;
 	background-color:#FA2E8F;
-
+    padding: .5vw;
 }
 aside {
-    height: 40vw;
-    width: 60vw;
+    height: 30vw;
+    width: 50vw;
     /*background: darkblue;
     margin: 1vw auto;
     border-radius: 1vw;
