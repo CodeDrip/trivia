@@ -15,6 +15,14 @@ var domlist = document.querySelectorAll("li")
 var nextButton = document.getElementById("nexBtn")
 // var points = 0
 
+var openEle = document.querySelector('.opener-wrapper')
+openEle.addEventListener('click', function(event) {
+    event.preventDefault();
+    openEle.style.display = 'none'
+
+})
+// openEle.style.display = 'none'
+
 var game = {
     quiz: [
         {q : "Whats That Show",
@@ -44,6 +52,11 @@ var game = {
         docThirdCh.innerHTML = this.quiz[this.index].options[2]
         docFourthCh.innerHTML = this.quiz[this.index].options[3]
         docmoviePic.style.background = `url(${this.quiz[this.index].img})`
+
+        domlist[0].id = ``
+        domlist[1].id = ``
+        domlist[2].id = ``
+        domlist[3].id = ``
         } else {
             console.log("Quiz Overrr!")
         }
