@@ -74,8 +74,9 @@ main {
 .choices li {
     display: inline-block;
 	background-color:#874BF9;
-	width: 15vw;
-	padding: .9vw .3vw;
+    width: 15vw;
+    /* padding: 0 auto; */
+	/* padding: .9vw .3vw; */
 	border-radius: 1vw;
 	margin: 1.2vh 0;
     font-size: 1.5vw;
@@ -88,6 +89,9 @@ main {
     /* font-family: 'Stalinist One', cursive; */
     vertical-align: center;
 }
+.choices li p {
+    margin: 0 auto;
+}
 .choices li:hover {
     background-color: #180340;
 }
@@ -99,8 +103,8 @@ main {
     padding: .5vw;
 }
 aside {
-    height: 300px;
-    max-width: 400px;
+    height: 250px;
+    width: 350px;
     /*background: darkblue;
     margin: 1vw auto;
     border-radius: 1vw;

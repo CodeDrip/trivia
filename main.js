@@ -58,7 +58,7 @@ var game = {
         domlist[2].id = ``
         domlist[3].id = ``
         } else {
-            console.log("Quiz Overrr!")
+            this.gameOver();
         }
     },
     loadNext: function(){
@@ -91,7 +91,7 @@ var game = {
             this.points += 10;
             this.addPoints();
             ele.className = "incorrect";
-            console.log(ele.className)
+            console.log(points)
             // ele.id = correct; 
             console.log(ele.className);
             console.log(this.points);
@@ -145,6 +145,9 @@ var game = {
             domlist[i].style.pointerEvents = "auto";
             domlist[i].className = 'options'
         }
+    },
+    gameOver: function(){
+        console.log("done")
     }
 
 }
