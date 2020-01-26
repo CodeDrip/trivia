@@ -11,7 +11,7 @@ var docFourthCh = document.querySelector("#ch3")//.textContent
 var docmoviePic = document.querySelector("aside")//.style.background
 var docAnswer;
 var domlist = document.querySelectorAll("li")
-console.log(domlist[0])
+// console.log(domlist[0])
 var nextButton = document.getElementById("nexBtn")
 // var points = 0
 
@@ -34,6 +34,7 @@ var game = {
         }
     ],
     index: 0,
+    // gameOpener: function() {}
     loadQ: function() {
         if (this.index <= this.quiz.length-1) {
         
@@ -54,22 +55,64 @@ var game = {
     check: function(ele) {
         var id = ele.id.split("");
         var compareId = id.pop()
-        console.log(id)        
-        console.log(compareId)        
+        console.log(id)   
+        console.log(ele)             
+        // console.log(compareId)        
         console.log(this.quiz[this.index].answer)
+        //If userClick == correct option index
         if(compareId == this.quiz[this.index].answer) {
-            console.log("Truuuu");
+            domlist[0].id = `incorrect`
+            domlist[1].id = `incorrect`
+            domlist[2].id = `incorrect`
+            domlist[3].id = `incorrect`
+
+            i = this.quiz[this.index].answer
+            //for i in domLost[i]
+            //if i = compareId
+            //domlist id [i] = correct
+            //else domlist
+            domlist[i].id = `correct`
+                
+
+
             this.points += 10;
-            ele.className = "correct";
             this.addPoints();
+            ele.className = "incorrect";
+            console.log(ele.className)
+            // ele.id = correct; 
             console.log(ele.className);
             console.log(this.points);
+            console.log(domlist)
+            
+
+
+            // console.log(domlist[i].id)
+            // domlist[2].style.color = `red`
+            // domlist[i].id = `correct`
+            // console.log(domlist[i].id)
+            console.log(domlist[0].className)
+
+
+
+
+
+
+
+
             // noMoreAction();
 
         } else {
             console.log("tryy againnn!")
             console.log(ele.className);
             ele.className = "false";
+            domlist[0].id = `incorrect`
+            domlist[1].id = `incorrect`
+            domlist[2].id = `incorrect`
+            domlist[3].id = `incorrect`
+            i = this.quiz[this.index].answer
+            domlist[i].id = `correct`
+
+
         }
 
     },

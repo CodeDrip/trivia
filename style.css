@@ -7,6 +7,12 @@ body {
     font-family: 'Stalinist One', cursive;
 
 }
+#correct {
+    background-color: #0e3afd;
+}
+#incorrect {
+    background-color: #FA2E8F;
+}
 header {
     display: flex;
     flex-direction: row;
@@ -82,6 +88,9 @@ main {
     /* font-family: 'Stalinist One', cursive; */
     vertical-align: center;
 }
+.choices li:hover {
+    background-color: #180340;
+}
 #nexBtn {
     width: 20vw;
     margin: 10px auto;
@@ -107,3 +116,4 @@ aside {
 
     /* height: auto; */
 }
+
