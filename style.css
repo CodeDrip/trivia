@@ -183,7 +183,7 @@ aside {
 }
 .closer {
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* width: ; */
@@ -194,8 +194,8 @@ aside {
     background-color: aliceblue;
     text-align: center;
     text-shadow: -1px -1px black, 1px 1px white;
-
-    margin:5px;
+    /* margin-top: 15vh;
+    margin:5px; */
     font-weight: bold;
     padding: 10px 0 10px 10px ;
     background-color: lightgray;
@@ -209,6 +209,15 @@ aside {
     cursor: pointer;
 
         
+}
+.closer-div {
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60vh;
+    width: 40vw;
 }
 .closer:hover {
     

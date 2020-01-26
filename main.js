@@ -14,12 +14,14 @@ var docmoviePic = document.querySelector("aside")//.style.background
 var docAnswer;
 var domlist = document.querySelectorAll("li")
 var nextButton = document.getElementById("nexBtn")
+var gameOpener = document.querySelector(`.opener-wrapper`)
 var gameCloser = document.querySelector(`.closer-wrapper`)
-
-var openEle = document.querySelector('.opener-wrapper')
-openEle.addEventListener('click', function(event) {
+var closerBut = document.querySelector(`.closer`) 
+var openBut = document.querySelector('.opener')
+openBut.addEventListener('click', function(event) {
     event.preventDefault();
-    openEle.style.display = 'none'
+    gameOpener.style.display = 'none'
+    index = 0
 
 })
 // openEle.style.display = 'none'
@@ -136,6 +138,9 @@ var game = {
             i = this.quiz[this.index].answer
             domlist[i].id = `correct`
 
+            nextButton.style.display = 'block'
+
+
 
         }
 
@@ -160,6 +165,20 @@ var game = {
     gameOver: function(){
         console.log("done")
         gameCloser.style.display = `block`
+        closerBut.addEventListener('click', function(event) {
+            window.location.reload();
+
+            // event.preventDefault();
+            // gameOpener.style.display = 'none'
+            // gameCloser.style.display = 'none'
+            // this.game()
+
+            // this.index = 0
+            // this.points = 0
+
+            // this.loadQ()
+        
+        })
     }
 
 }
