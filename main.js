@@ -1,3 +1,5 @@
+//make next button invisible when its not needed
+//fix options padding + points
 var container = document.querySelector("section")
 
 var pointsHolder = document.querySelector(".score")
@@ -11,9 +13,8 @@ var docFourthCh = document.querySelector("#ch3")//.textContent
 var docmoviePic = document.querySelector("aside")//.style.background
 var docAnswer;
 var domlist = document.querySelectorAll("li")
-// console.log(domlist[0])
 var nextButton = document.getElementById("nexBtn")
-// var points = 0
+var gameCloser = document.querySelector(`.closer-wrapper`)
 
 var openEle = document.querySelector('.opener-wrapper')
 openEle.addEventListener('click', function(event) {
@@ -57,6 +58,12 @@ var game = {
         domlist[1].id = ``
         domlist[2].id = ``
         domlist[3].id = ``
+
+        
+        nextButton.style.display = 'none'
+        
+        // openEle.style.display =
+
         } else {
             this.gameOver();
         }
@@ -91,7 +98,7 @@ var game = {
             this.points += 10;
             this.addPoints();
             ele.className = "incorrect";
-            console.log(points)
+            // console.log(points)
             // ele.id = correct; 
             console.log(ele.className);
             console.log(this.points);
@@ -104,6 +111,10 @@ var game = {
             // domlist[i].id = `correct`
             // console.log(domlist[i].id)
             console.log(domlist[0].className)
+
+           
+            nextButton.style.display = 'block'
+            
 
 
 
@@ -148,6 +159,7 @@ var game = {
     },
     gameOver: function(){
         console.log("done")
+        gameCloser.style.display = `block`
     }
 
 }

@@ -39,7 +39,7 @@ h2 {
     color: #E0FFF9;
     /* font-family: 'Caesar Dressing', cursive; */
     text-align: center;
-    font-size: 1vh;
+    font-size: 2vh;
     background-color:#874BF9;
     width: 40vw;
     margin: 0 auto;
@@ -72,7 +72,9 @@ main {
 
 }
 .choices li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+
 	background-color:#874BF9;
     width: 15vw;
     /* padding: 0 auto; */
@@ -90,10 +92,18 @@ main {
     vertical-align: center;
 }
 .choices li p {
+    display: flex;
     margin: 0 auto;
 }
 .choices li:hover {
     background-color: #180340;
+}
+.grader{
+    display: none;
+    height: 25vh;
+	width: 40vw;
+	background-color: #00FFCB;
+	margin: 1vw auto;
 }
 #nexBtn {
     width: 20vw;
@@ -165,6 +175,58 @@ aside {
     
 }
 .opener-wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(22, 35, 47);
+
+}
+.closer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: ; */
+    /* height: 25vh;
+    width: 25vw; */
+    /* padding: 10px; */
+
+    background-color: aliceblue;
+    text-align: center;
+    text-shadow: -1px -1px black, 1px 1px white;
+
+    margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .5em gray; 
+    cursor: pointer;
+
+        
+}
+.closer:hover {
+    
+    background-color: rgba(211, 211, 211, 0.692);
+    /* position: relative; */
+    /* top: .2em; */
+
+}
+.closer:active {
+    
+        box-shadow: none;
+        /* position: relative; */
+        /* top: .2em; */
+    
+}
+.closer-wrapper {
+    /* display: block; */
+    display: none;
     position: fixed;
     height: 100vh;
     width: 100vw;
