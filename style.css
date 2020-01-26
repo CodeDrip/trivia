@@ -35,7 +35,7 @@ h2 {
     text-align: center;
     font-size: 2vw;
     background-color:#874BF9;
-    width: 60vw;
+    width: 40vw;
     margin: 0 auto;
     line-height: 4vw;
     border-radius: 8px;
@@ -54,7 +54,7 @@ main {
 }
 .choices ul {
     height: 15vw;
-	width: 60vw;
+	width: 40vw;
 	background-color: #00FFCB;
 	margin: 1vw auto;
 	border-radius: 8px;
@@ -68,17 +68,18 @@ main {
 .choices li {
     display: inline-block;
 	background-color:#874BF9;
-	width: 25vw;
-	padding: 1vw;
+	width: 15vw;
+	padding: .9vw .3vw;
 	border-radius: 1vw;
-	margin: 2.3vw 1vw;
-	font-size: 1.5vw;
+	margin: 1vw 0;
+    font-size: 1.5vw;
+    line-height: 22px 0 0 0;
 	color:#E0FFF9;
 	box-shadow: 0px 3px 0px rgb(45, 25, 82);
 	cursor: pointer;
 	outline: none;
     text-align: center;
-    font-family: 'Stalinist One', cursive;
+    /* font-family: 'Stalinist One', cursive; */
     vertical-align: center;
 }
 #nexBtn {
@@ -89,8 +90,8 @@ main {
     padding: .5vw;
 }
 aside {
-    height: 30vw;
-    width: 50vw;
+    height: 300px;
+    max-width: 400px;
     /*background: darkblue;
     margin: 1vw auto;
     border-radius: 1vw;

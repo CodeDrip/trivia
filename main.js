@@ -18,7 +18,7 @@ var nextButton = document.getElementById("nexBtn")
 var game = {
     quiz: [
         {q : "Whats That Show",
-        options: ["The Tick", "Hey Arnold!", "Rocket Power", "Gargoyles"],
+        options: ["The<br> Tick", "Hey Arnold!", "Rocket Power", "Gargoyles"],
         answer: 2,
         img: "img/num1.gif"
         },
