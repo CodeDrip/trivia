@@ -130,7 +130,11 @@ aside {
 
     /* height: auto; */
 }
-
+.stats {
+    color: rgb(130, 115, 143);
+    text-align: center;
+    padding-top: 2vh;
+}
 .opener {
     position: fixed;
     top: 50%;

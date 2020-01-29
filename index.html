@@ -17,14 +17,14 @@
     </header>
         <div class="opener-wrapper">
             <span class="opener">
-                START<BR>GAME
+                START 
             </span>
         </div>
         <div class="closer-wrapper">
             <div class="closer-div">
                 <p class="stats">THANKS FOR PLAYING!</p>
                 <p class="stats">GAME OVER</p>
-                <p class="stats">FINAL SCORE:</p>
+                <p class="stats" id="final-stats-3">FINAL SCORE:</p>
                 <span class="closer">
                     PLAY<BR>AGAIN
                 </span>
@@ -41,10 +41,10 @@
         
         <article class="choices">
             <ul id = "quiz-cont">
-                <li><p class="options" id="ch0" onclick = "selected(this)">Test1</p></li>
-                <li><p class="options" id="ch1" onclick = "selected(this)">Test2</p></li>
-                <li><p class="options" id="ch2" onclick = "selected(this)">Test3</p></li>
-                <li><p class="options" id="ch3" onclick = "selected(this)">test4</p></li>
+                <li onclick = "selected(this)"><p class="options" id="ch0">Test1</p></li>
+                <li onclick = "selected(this)"><p class="options" id="ch1" onclick = "selected(this)">Test2</p></li>
+                <li onclick = "selected(this)"><p class="options" id="ch2" onclick = "selected(this)">Test3</p></li>
+                <li onclick = "selected(this)"><p class="options" id="ch3" onclick = "selected(this)">test4</p></li>
             </ul>
         </article>
         <div class="grader">correct</div>

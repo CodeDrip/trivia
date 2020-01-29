@@ -24,7 +24,7 @@ openBut.addEventListener('click', function(event) {
     index = 0
 
 })
-// openEle.style.display = 'none'
+var finalPointsPara = document.querySelector("#final-stats-3")
 
 var game = {
     quiz: [
@@ -66,7 +66,8 @@ var game = {
         
         // openEle.style.display =
 
-        } else {
+        }
+         else {
             this.gameOver();
         }
     },
@@ -78,7 +79,7 @@ var game = {
         var id = ele.id.split("");
         var compareId = id.pop()
         console.log(id)   
-        console.log(ele)             
+        console.log(ele.parentElement)             
         // console.log(compareId)        
         console.log(this.quiz[this.index].answer)
         //If userClick == correct option index
@@ -165,6 +166,7 @@ var game = {
     gameOver: function(){
         console.log("done")
         gameCloser.style.display = `block`
+        finalPointsPara.innerHTML = `Final Points: ${this.points} / 30`
         closerBut.addEventListener('click', function(event) {
             window.location.reload();
 
